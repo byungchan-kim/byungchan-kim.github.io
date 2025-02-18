@@ -16,7 +16,7 @@
     }
 
     function setLocalizedText() {
-        const lang = getQueryParam('lang').removeTrailingSlash(str);
+        const lang = removeTrailingSlash(getQueryParam('lang'));
         const linkElement = document.getElementById('notice-link');
 
         switch (lang) {
