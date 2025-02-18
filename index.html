@@ -2,24 +2,48 @@
 <html>
 <head>
 <title>DDTEST</title>
+<scirpt>
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function removeTrailingSlash(str) {
+        if (str !== null && str.endsWith('/')) {
+            return str.slice(0, -1);
+        }
+        return str;
+    }
+
+    function setLocalizedText() {
+        const lang = getQueryParam('lang').removeTrailingSlash(str);
+        const linkElement = document.getElementById('notice-link');
+
+        switch (lang) {
+            case 'en':
+                linkElement.textContent = 'Go to Notice Page';
+                break;
+            case 'ko':
+                linkElement.textContent = '공지 바로 가기';
+                break;
+            default:
+                linkElement.textContent = 'Go to Notice Page';
+        }
+    }
+
+    window.onload = setLocalizedText;
+</scirpt>
 </head>
 <body>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
-    <a href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">공지 바로 가기</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
+    <a id="notice-link" href="https://game.naver.com/lounge/DARKEST_DAYS" target="_blank">Loading...</a><br>
 </body>
 </html>
